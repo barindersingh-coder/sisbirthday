@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday Arshdeep Kaur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB, #E0F7FF);
+            position: relative;
+            touch-action: manipulation;
+        }
+
+        /* Animated Sky Background - Mobile Optimized */
+        .sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .sun {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #FFD700, #FFA500);
+            border-radius: 50%;
+            box-shadow: 0 0 30px #FFA500;
+            animation: sunGlow 4s infinite alternate;
+        }
+
+        @keyframes sunGlow {
+            0% {
+                box-shadow: 0 0 30px #FFA500;
+            }
+
+            100% {
+                box-shadow: 0 0 50px #FFA500, 0 0 80px #FF6347;
+            }
+        }
+
+        /* Clouds Animation - Mobile Optimized */
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            animation: moveCloud linear infinite;
+        }
+
+        .cloud:before,
+        .cloud:after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+        }
+
+        .cloud-1 {
+            width: 120px;
+            height: 40px;
+            top: 80px;
+            animation-duration: 50s;
+            animation-delay: -10s;
+        }
+
+        .cloud-1:before {
+            width: 50px;
+            height: 50px;
+            top: -20px;
+            left: 15px;
+        }
+
+        .cloud-1:after {
+            width: 70px;
+            height: 70px;
+            top: -30px;
+            right: 20px;
+        }
+
+        .cloud-2 {
+            width: 150px;
+            height: 50px;
+            top: 150px;
+            animation-duration: 45s;
+            animation-delay: -5s;
+        }
+
+        .cloud-2:before {
+            width: 60px;
+            height: 60px;
+            top: -25px;
+            left: 20px;
+        }
+
+        .cloud-2:after {
+            width: 80px;
+            height: 80px;
+            top: -35px;
+            right: 25px;
+        }
+
+        .cloud-3 {
+            width: 100px;
+            height: 35px;
+            top: 220px;
+            animation-duration: 60s;
+        }
+
+        .cloud-3:before {
+            width: 45px;
+            height: 45px;
+            top: -15px;
+            left: 10px;
+        }
+
+        .cloud-3:after {
+            width: 55px;
+            height: 55px;
+            top: -20px;
+            right: 15px;
+        }
+
+        .cloud-4 {
+            width: 130px;
+            height: 45px;
+            top: 300px;
+            animation-duration: 55s;
+            animation-delay: -15s;
+        }
+
+        .cloud-4:before {
+            width: 55px;
+            height: 55px;
+            top: -20px;
+            left: 20px;
+        }
+
+        .cloud-4:after {
+            width: 65px;
+            height: 65px;
+            top: -25px;
+            right: 25px;
+        }
+
+        @keyframes moveCloud {
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        /* Main Content - Mobile First Design */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header with Birthday Title */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 20px 15px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 0, 150, 0.15);
+            width: 100%;
+            max-width: 900px;
+            backdrop-filter: blur(5px);
+        }
+
+        .birthday-title {
+            font-size: 2.2rem;
+            color: #FF4081;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            color: #3F51B5;
+            margin-bottom: 12px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .details {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .details div {
+            background: rgba(63, 81, 181, 0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        /* Sender Information */
+        .sender-info {
+            background: rgba(233, 30, 99, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .sender-title {
+            font-size: 1.1rem;
+            color: #E91E63;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* Blessings Section */
+        .blessings-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 150, 0.1);
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .blessings-title {
+            text-align: center;
+            color: #E91E63;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .blessings-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #E91E63, #3F51B5);
+            border-radius: 2px;
+        }
+
+        .blessings {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+            text-align: center;
+        }
+
+        .blessings p {
+            margin-bottom: 18px;
+            position: relative;
+            padding-left: 25px;
+            text-align: left;
+        }
+
+        .blessings p i {
+            color: #FF4081;
+            margin-right: 8px;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+
+        /* Music Controls - Mobile Touch Friendly */
+        .music-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .music-btn {
+            background: #FF4081;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 64, 129, 0.3);
+            width: 100%;
+            max-width: 280px;
+            min-height: 54px;
+            touch-action: manipulation;
+        }
+
+        .music-btn:active {
+            background: #E91E63;
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(255, 64, 129, 0.3);
+        }
+
+        .music-info {
+            font-size: 0.95rem;
+            color: #555;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 280px;
+            margin-top: 5px;
+        }
+
+        .volume-control i {
+            color: #FF4081;
+            font-size: 1.2rem;
+        }
+
+        #volumeSlider {
+            flex: 1;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #volumeSlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #FF4081;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* File Upload Styling */
+        .upload-section {
+            margin-top: 15px;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .upload-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .upload-btn:hover {
+            background: #45a049;
+        }
+
+        /* Decorative Elements */
+        .balloons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 60px;
+            border-radius: 50%;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon:before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 30px;
+            background: #333;
+        }
+
+        .balloon-1 {
+            background: radial-gradient(circle at 30% 30%, #FF5252, #D50000);
+            animation-delay: 0s;
+        }
+
+        .balloon-2 {
+            background: radial-gradient(circle at 30% 30%, #448AFF, #2962FF);
+            animation-delay: 0.5s;
+        }
+
+        .balloon-3 {
+            background: radial-gradient(circle at 30% 30%, #69F0AE, #00C853);
+            animation-delay: 1s;
+        }
+
+        .balloon-4 {
+            background: radial-gradient(circle at 30% 30%, #FFD740, #FFAB00);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #555;
+            font-size: 1rem;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 900px;
+            line-height: 1.5;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+
+            .header {
+                padding: 25px;
+                margin-bottom: 35px;
+            }
+
+            .birthday-title {
+                font-size: 3rem;
+            }
+
+            .name {
+                font-size: 2.3rem;
+            }
+
+            .details {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .details div {
+                min-width: 180px;
+            }
+
+            .blessings-container {
+                padding: 35px 30px;
+            }
+
+            .blessings-title {
+                font-size: 2.2rem;
+            }
+
+            .blessings {
+                font-size: 1.2rem;
+                line-height: 1.7;
+            }
+
+            .blessings p {
+                padding-left: 30px;
+            }
+
+            .music-controls {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 600px;
+            }
+
+            .music-btn {
+                width: auto;
+                min-width: 200px;
+            }
+
+            .sun {
+                top: 50px;
+                right: 80px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .cloud-1 {
+                width: 150px;
+                height: 50px;
+                top: 100px;
+            }
+
+            .cloud-2 {
+                width: 180px;
+                height: 60px;
+                top: 180px;
+            }
+
+            .cloud-3 {
+                width: 130px;
+                height: 45px;
+                top: 250px;
+            }
+
+            .cloud-4 {
+                width: 160px;
+                height: 55px;
+                top: 350px;
+            }
+
+            .balloon {
+                width: 55px;
+                height: 65px;
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 30px;
+            }
+
+            .header {
+                padding: 30px;
+                margin-bottom: 40px;
+            }
+
+            .birthday-title {
+                font-size: 3.5rem;
+            }
+
+            .name {
+                font-size: 2.8rem;
+            }
+
+            .details {
+                font-size: 1.2rem;
+            }
+
+            .sender-title {
+                font-size: 1.3rem;
+            }
+
+            .blessings-container {
+                padding: 40px;
+            }
+
+            .blessings-title {
+                font-size: 2.5rem;
+            }
+
+            .blessings {
+                font-size: 1.3rem;
+                line-height: 1.8;
+            }
+
+            .music-controls {
+                max-width: 700px;
+            }
+
+            .music-btn:hover {
+                background: #E91E63;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 12px rgba(255, 64, 129, 0.4);
+            }
+
+            .sun {
+                top: 50px;
+                right: 100px;
+                width: 100px;
+                height: 100px;
+            }
+
+            .cloud-1 {
+                width: 180px;
+                height: 60px;
+                top: 100px;
+            }
+
+            .cloud-2 {
+                width: 220px;
+                height: 70px;
+                top: 200px;
+            }
+
+            .cloud-3 {
+                width: 150px;
+                height: 50px;
+                top: 300px;
+            }
+
+            .cloud-4 {
+                width: 200px;
+                height: 65px;
+                top: 400px;
+            }
+
+            .balloon {
+                width: 60px;
+                height: 70px;
+            }
+
+            .balloon:before {
+                height: 40px;
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+        }
+
+        /* Landscape Orientation Fixes */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .container {
+                padding: 10px;
+                justify-content: flex-start;
+            }
+
+            .header {
+                margin-bottom: 15px;
+                padding: 15px;
+            }
+
+            .birthday-title {
+                font-size: 1.8rem;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .blessings-container {
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+
+            .blessings-title {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+
+            .blessings p {
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
+
+            .footer {
+                margin-top: 15px;
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 360px) {
+            .birthday-title {
+                font-size: 1.8rem;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .blessings-title {
+                font-size: 1.5rem;
+            }
+
+            .blessings p {
+                font-size: 1rem;
+                padding-left: 0;
+            }
+
+            .blessings p i {
+                position: static;
+                margin-right: 5px;
+            }
+
+            .music-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Prevent text selection on buttons for better mobile experience */
+        .music-btn,
+        .volume-control,
+        .upload-btn {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        /* Improve touch targets */
+        button,
+        input[type="range"] {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Sky Background -->
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header">
+            <h1 class="birthday-title">🎉 Happy Birthday! 🎂</h1>
+            <div class="name">Arshdeep Kaur</div>
+            <div class="details">
+                <div>CRN: 2221021</div>
+                <div>URN: 2203806</div>
+            </div>
+
+            <div class="sender-info">
+                <div class="sender-title">With Best Wishes From:</div>
+                <div>Barinder Singh</div>
+                <div>URN: 2203814 | CRN: 2221031</div>
+            </div>
+        </div>
+
+        <div class="blessings-container">
+            <h2 class="blessings-title">Birthday Blessings for You</h2>
+            <div class="blessings">
+                <p><i class="fas fa-heart"></i> Dear Arshdeep, on your special day, may you be blessed with endless
+                    happiness, good health, and success in all your endeavors. May this new chapter of your life bring
+                    you closer to your dreams and aspirations.</p>
+
+                <p><i class="fas fa-star"></i> May every moment of your life be filled with love, laughter, and
+                    beautiful memories. May you achieve all your goals and may success be your constant companion
+                    throughout your journey.</p>
+
+                <p><i class="fas fa-birthday-cake"></i> On this wonderful day, I wish you a year filled with new
+                    opportunities, exciting adventures, and experiences that make your heart smile. May you continue to
+                    shine brightly and inspire everyone around you.</p>
+
+                <p><i class="fas fa-gift"></i> May God bless you with the strength to overcome any challenges, the
+                    wisdom to make the right decisions, and the kindness to touch the lives of everyone you meet in the
+                    most positive way.</p>
+
+                <p><i class="fas fa-blessing"></i> As you celebrate another year of your amazing life, remember that you
+                    are unique, talented, and capable of achieving greatness. Keep smiling and spreading your wonderful
+                    energy wherever you go!</p>
+            </div>
+
+            <!-- Music Controls -->
+            <div class="music-controls">
+                <button class="music-btn" id="playMusic">
+                    <i class="fas fa-music"></i> Play Birthday Song
+                </button>
+                <button class="music-btn" id="pauseMusic">
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <div class="music-info" id="musicStatus">Click to play "Happy Birthday" song</div>
+
+                <div class="volume-control">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+
+            <!-- Upload Section for Local Music -->
+            <div class="upload-section" id="uploadSection">
+                <p><small>If music doesn't play, you can upload your "Happy.mp3" file:</small></p>
+                <input type="file" id="musicUpload" accept="audio/mp3,audio/*" style="display: none;">
+                <button class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-upload"></i> Upload Happy.mp3
+                </button>
+                <p id="uploadStatus" style="font-size: 0.8rem; margin-top: 8px; color: #666;"></p>
+            </div>
+
+            <!-- Decorative Balloons -->
+            <div class="balloons">
+                <div class="balloon balloon-1"></div>
+                <div class="balloon balloon-2"></div>
+                <div class="balloon balloon-3"></div>
+                <div class="balloon balloon-4"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Wishing you the most amazing birthday celebration filled with joy and laughter! 🎈</p>
+            <p>May all your dreams and wishes come true today and throughout the coming year.</p>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Player -->
+    <audio id="birthdayAudio">
+        <!-- First try local file -->
+        <source src="happy.mp3" type="audio/mpeg">
+        <!-- Fallback to online version if local doesn't work -->
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Get audio element and buttons
+        const birthdayAudio = document.getElementById('birthdayAudio');
+        const playBtn = document.getElementById('playMusic');
+        const pauseBtn = document.getElementById('pauseMusic');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const musicStatus = document.getElementById('musicStatus');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const musicUpload = document.getElementById('musicUpload');
+        const uploadStatus = document.getElementById('uploadStatus');
+
+        // Set initial volume
+        birthdayAudio.volume = volumeSlider.value;
+
+        // Check if audio can play
+        let audioCanPlay = false;
+
+        // Try to load and play the audio to check if it works
+        birthdayAudio.load();
+
+        // Audio event listeners
+        birthdayAudio.addEventListener('canplay', function () {
+            audioCanPlay = true;
+            console.log("Audio can be played");
+            musicStatus.textContent = "Ready to play Happy Birthday song!";
+            musicStatus.style.color = "#4CAF50";
+        });
+
+        birthdayAudio.addEventListener('error', function (e) {
+            console.log("Audio error:", birthdayAudio.error);
+            audioCanPlay = false;
+            musicStatus.textContent = "Local audio file not found. Please upload Happy.mp3 or use online version.";
+            musicStatus.style.color = "#FF4081";
+        });
+
+        // Play music function
+        function playBirthdaySong() {
+            if (!audioCanPlay) {
+                // Try to load from online source
+                birthdayAudio.src = "https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3";
+                birthdayAudio.load();
+
+                // Try again after loading
+                setTimeout(() => {
+                    if (birthdayAudio.readyState >= 2) {
+                        playAudio();
+                    } else {
+                        musicStatus.textContent = "Please upload your Happy.mp3 file or check internet connection";
+                        musicStatus.style.color = "#FF4081";
+                    }
+                }, 500);
+                return;
+            }
+
+            playAudio();
+        }
+
+        function playAudio() {
+            birthdayAudio.play().then(() => {
+                console.log("Birthday song is playing!");
+                playBtn.innerHTML = '<i class="fas fa-volume-up"></i> Playing...';
+                playBtn.style.background = '#4CAF50';
+                musicStatus.textContent = "Happy Birthday song is now playing!";
+                musicStatus.style.color = "#4CAF50";
+            }).catch(error => {
+                console.log("Playback error:", error);
+                musicStatus.textContent = "Click 'Play Birthday Song' to start music";
+                musicStatus.style.color = "#FF4081";
+
+                // For iOS/mobile devices, we need user interaction
+                if (error.name === 'NotAllowedError') {
+                    musicStatus.textContent = "Tap 'Play Birthday Song' to start music (required for iOS)";
+                }
+            });
+        }
+
+        // Pause music function
+        function pauseBirthdaySong() {
+            birthdayAudio.pause();
+            playBtn.innerHTML = '<i class="fas fa-music"></i> Play Birthday Song';
+            playBtn.style.background = '#FF4081';
+            musicStatus.textContent = "Music paused. Click to play again.";
+            musicStatus.style.color = "#555";
+        }
+
+        // Volume control function
+        function updateVolume() {
+            birthdayAudio.volume = volumeSlider.value;
+        }
+
+        // File upload function
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // Check if it's an audio file
+            if (!file.type.startsWith('audio/')) {
+                uploadStatus.textContent = "Please select an audio file (MP3 recommended)";
+                uploadStatus.style.color = "#FF4081";
+                return;
+            }
+
+            // Create a URL for the uploaded file
+            const fileURL = URL.createObjectURL(file);
+
+            // Update audio source
+            birthdayAudio.src = fileURL;
+            birthdayAudio.load();
+
+            uploadStatus.textContent = `Loaded: ${file.name}`;
+            uploadStatus.style.color = "#4CAF50";
+
+            // Try to play after loading
+            birthdayAudio.addEventListener('canplay', function onCanPlay() {
+                audioCanPlay = true;
+                birthdayAudio.removeEventListener('canplay', onCanPlay);
+
+                // Auto-play the uploaded song
+                setTimeout(playBirthdaySong, 300);
+            }, { once: true });
+        }
+
+        // Event listeners for buttons
+        playBtn.addEventListener('click', playBirthdaySong);
+        pauseBtn.addEventListener('click', pauseBirthdaySong);
+        volumeSlider.addEventListener('input', updateVolume);
+        uploadBtn.addEventListener('click', () => musicUpload.click());
+        musicUpload.addEventListener('change', handleFileUpload);
+
+        // Touch event listeners for better mobile experience
+        playBtn.addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            this.style.transform = 'translateY(2px)';
+            this.style.boxShadow = '0 2px 4px rgba(255, 64, 129, 0.3)';
+        });
+
+        playBtn.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            this.style.transform = '';
+            this.style.boxShadow = '0 4px 8px rgba(255, 64, 129, 0.3)';
+        });
+
+        // Show instructions based on device
+        window.onload = function () {
+            // Check if we're on a mobile device
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                musicStatus.textContent = "Tap 'Play Birthday Song' to start the birthday music";
+            } else {
+                musicStatus.textContent = "Click 'Play Birthday Song' to start the birthday music";
+            }
+
+            // Try to auto-play after a delay
+            setTimeout(() => {
+                // Try to play the local file first
+                birthdayAudio.load();
+
+                // Check after loading
+                setTimeout(() => {
+                    if (audioCanPlay) {
+                        playBirthdaySong();
+                    }
+                }, 1000);
+            }, 500);
+        };
+
+        // Handle orientation change for better mobile experience
+        window.addEventListener('orientationchange', function () {
+            setTimeout(function () {
+                document.body.style.display = 'none';
+                document.body.offsetHeight;
+                document.body.style.display = '';
+            }, 100);
+        });
+
+        // Prevent double-tap zoom on mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Show file name when uploaded
+        musicUpload.addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                uploadStatus.textContent = `Selected: ${this.files[0].name}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
